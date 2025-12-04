@@ -1,0 +1,86 @@
+:root {
+  --ff-sans: 'Noto Sans', sans-serif;
+  --ff-serif: 'Noto Serif', serif;
+  --ff-mono: 'Noto Sans Mono', monospace;
+
+  --text-xxl: 4.209rem;
+  --text-xl: 3.157rem;
+  --text-lg: 2.369rem;
+  --text-md: 1.777rem;
+  --text-sm: 1.333rem;
+  --text-xs: 1rem;
+
+  --space: 1.333rem;
+
+  --hue: 230;
+  --hue-secondary: 50;
+  --color-primary: hsl(var(--hue), 50%, 80%);
+  --color-onPrimary: hsl(var(--hue), 50%, 20%);
+  --color-secondary: hsl(var(--hue), 20%, 80%);
+  --color-onSecondary: hsl(var(--hue), 20%, 20%);
+  --color-accent: hsl(var(--hue-secondary), 50%, 80%);
+  --color-onAccent: hsl(var(--hue-secondary), 50%, 20%);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-family: var(--ff-sans);
+}
+body {
+  min-height: 100vh;
+  position: relative;
+  font-size: var(--text-md);
+  color: var(--color-onSecondary);
+  padding-block-end: calc(var(--space) * 6);
+  font-weight: 300;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--ff-serif);
+}
+h1 {
+  font-size: var(--text-xxl);
+  color: var(--color-onPrimary);
+  text-transform: capitalize;
+  font-weight: 300;
+}
+h2 {
+  font-size: var(--text-xl);
+  color: var(--color-onAccent);
+}
+h3 {
+  font-size: var(--text-lg);
+  color: var(--color-accent);
+}
+pre,
+code {
+  font-family: var(--ff-mono);
+  background-color: var(--color-accent);
+}
+header {
+  background-color: var(--color-primary);
+  border-bottom: 2px solid var(--color-onPrimary);
+}
+header,
+main,
+footer {
+  margin: 0;
+  padding: var(--space) calc(var(--space) * 3);
+}
+footer {
+  background-color: var(--color-secondary);
+  position: fixed;
+  inset: auto 0 0 0;
+}
+footer * {
+  font-size: var(--text-sm);
+}
